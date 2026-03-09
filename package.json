@@ -1,0 +1,30 @@
+{
+  "name": "slavery-in-the-us",
+  "version": "1.0.0",
+  "description": "High School History Project - Slavery in the United States",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.school.slavery-history",
+    "productName": "Slavery in the US",
+    "files": ["main.js", "slavery-in-the-us.html", "pic*.png"],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.icns"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
